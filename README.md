@@ -133,3 +133,82 @@ One of the fundamental challenges in addressing these goals is the presence of n
 by surveying this issue and highlighting potential mitigations.  
 
 **3.1 Non-IID Data in Federated Learning**  
+
+
+
+接下来的所有论文来自：[innovation-cat/Awesome-Federated-Machine-Learning: Everything about federated learning, including research papers, codes, tutorials, blogs and beyond (github.com)](https://github.com/innovation-cat/Awesome-Federated-Machine-Learning)
+
+## data privacy
+
+#### Gradient Disaggregation: Breaking Privacy in Federated Learning by Reconstructing the User Participant Matrix
+
+<img src="README.assets/image-20211206105109309.png" alt="image-20211206105109309" style="zoom:50%;" />
+
+问题引出：在联邦学习中模型聚合可能是不安全的，不安全的server可能会使用反向梯度求解得到客户端数据的信息。（一个不受信任的中央服务器可能会在重复观察霞将用户更新从参与者的更新的总和中分解出来，使得服务器能够通过传统的梯度推理攻击恢复个人用户的私人训练数据）
+
+方案提出：我们的方法是利用监督、调试、管理联邦学习系统的设备分析汇总信息，从聚合的模型更新中重构参与者的信息。（In this work, we develop a method for gradient disaggregation, showing that secure aggregation offers little privacy protection against an adversarial server seeking to undermine individual users’ data privacy.  ）
+
+- 过去的方法：为了解决这个关键的隐私缺陷，研究人员引入了利用安全多方计算的方法，以限制中央服务器对个人参与者的模型更新的可见性。
+- 此外，通过聚合超过数十个到数百或数千个用户的更新，更新会变得模糊，以至于大多数推理攻击都变得无效
+
+实验设定：我们的攻击是并行的，我们成功地分解了用户对设置地更新，多大数千名参与者，我们定量和定性地证明了对分解更新的各种推理攻击能力地显著提升。我们地攻击允许将学习的属性归属到个人用户，从而破坏匿名性，并且表明一个确定的中央服务器可能会破坏安全聚合协议，从而破坏联邦学习中个人用户地数据隐私。
+
+本文主要贡献：
+
+- We introduce and formulate the gradient disaggregation problem as a constrained binary matrix factorization problem.   引入受限的二元矩阵分解去表达梯度分解问题。
+  - 证明我们的分解攻击可以准确的恢复福哦大数千个参与者的用户参与者矩阵，揭示了每个用户的模型更新
+  - 我们表明梯度分解即使在存在显著噪声的情况下也能工作，并允许我们分解由FedAvg生成的模型更新。
+- 我们利用梯度分解来显著提升传统的模型更新推理攻击的质量。
+  - 我们的研究表明，如果没有梯度分解，推理攻击常常无法恢复对数十到数百哥用户的更新进行聚合的有意义的信息
+  - 通过梯度分解，我们成功的分解模型更新中恢复了用户的特权数据。
+
+相关工作：
+
+- Secure aggregation，但是我们可以使用梯度分解的方式去破坏和获取用户的信息
+- Infrastructure to support, debug, and manage federated learning systems is critical to their functioning.  在我们的工作中，我们利用来自设备分析的总结信息，特别是用户进行培训的频率，以帮助分解梯度，破坏隐私。
+
+> [gdisag/gradient_disaggregation (github.com)](https://github.com/gdisag/gradient_disaggregation)
+
+
+
+## communication cost
+
+#### pFedHN
+
+> [AvivSham/pFedHN: Official code implementation for "Personalized Federated Learning using Hypernetworks" (github.com)](https://github.com/AvivSham/pFedHN)
+
+#### Federated Continual Learning with Weighted Inter-client Transfer
+
+[Federated Continual Learning with Weighted Inter-client Transfer (arxiv.org)](https://arxiv.org/pdf/2003.03196.pdf)
+
+>  [code](https://github.com/wyjeong/FedWeIT)
+
+## model aggration
+
+#### Federated Composite Optimization
+
+[2011.08474.pdf (arxiv.org)](https://arxiv.org/pdf/2011.08474.pdf)
+
+> [hongliny/FCO-ICML21: Code repository is for "Federated Composite Optimization", to appear in ICML 2021 (github.com)](https://github.com/hongliny/FCO-ICML21)
+
+#### FedRep
+
+[2102.07078.pdf (arxiv.org)](https://arxiv.org/pdf/2102.07078.pdf)
+
+> [code](https://github.com/lgcollins/FedRep)
+
+
+
+
+
+数据异构图、数据分布
+
+
+
+
+
+
+
+2020-2021学年学业奖学金二等奖
+
+2020-2021学年文体活动积极分子
