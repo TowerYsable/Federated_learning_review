@@ -1,14 +1,26 @@
+联邦学习主要研究点：
+
+- 统计异构：例如数据异构（数据的Non-IID、部分数据无标签）  <-- 数据质量、碎片化问题
+  - FedMA、FedProx、Adaptive Federated Optimization、FedNAS
+  - 在 Non-IID 等条件下的收敛性
+- 系统约束：通信与计算能力的差异  <--  算力和数据存储问题
+  - 压缩、分散、量化等技术
+- 可信度：数据安全、隐私问题、公平性问题 <--法律、道德上的限制
+  - 对抗性攻击、防御技术、差分隐私保护
+
 # 1 basic
 
 ## 1.1 FL libraries   
 
 ### 1.1.1 FedML [link](https://fedml.ai)
 
+  分布式、移动设备、单机仿真
+
 ![image-20211118131447721](README.assets/image-20211118131447721.png)
 
 **contribution:**
 
-- FedML supports three computing paradigms: on-device training for edge devices, distributed computing, and single-machine simulation.   
+- FedML supports three computing paradigms: on-device training for edge devices, distributed computing, and single-machine simulation. 
 - FedML also promotes diverse algorithmic research with flexible and generic API design and comprehensive reference baseline implementations (optimizer, models, and datasets).   
   - Support of diverse FL computing paradigms.   One key feature of FedML is its support of FL on real-world hardware platforms.   
   - Support of diverse FL configurations.   
@@ -57,6 +69,8 @@ FedML Architecture Design
 ![image-20211118133406431](README.assets/image-20211118133406431.png)
 
 ![image-20211118153740610](README.assets/image-20211118153740610.png)
+
+> 参考：[「联邦学习」— FedML 开源库介绍 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/166108945)
 
 
 
@@ -137,6 +151,8 @@ by surveying this issue and highlighting potential mitigations.
 
 
 接下来的所有论文来自：[innovation-cat/Awesome-Federated-Machine-Learning: Everything about federated learning, including research papers, codes, tutorials, blogs and beyond (github.com)](https://github.com/innovation-cat/Awesome-Federated-Machine-Learning)
+
+
 
 ## data privacy
 
